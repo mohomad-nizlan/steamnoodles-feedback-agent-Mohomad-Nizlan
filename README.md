@@ -1,4 +1,4 @@
-# SteamNoodles Feedback Agent – Mohomad Nizlan
+# SteamNoodles Feedback Agent –Mohomad Nizlan
 
 ## Your Details
 - **Name:** Mohomad Nizlan
@@ -6,7 +6,7 @@
 - **Year:** 2nd year
 
 ## Project Overview
-This project implements **two AI agents** using LangChain and OpenAI GPT:
+This project implements **two AI agents** using LangChain and **local LLMs** via CTransformers:
 
 - **Agent 1 – Feedback Response:** Analyzes sentiment (positive/negative/neutral) and generates polite replies.
 - **Agent 2 – Sentiment Visualization:** Plots sentiment trends over a user-specified date range using line plots.
@@ -16,16 +16,16 @@ This project implements **two AI agents** using LangChain and OpenAI GPT:
 ## Setup Instructions
 1. Clone this repository:
     ```bash
-    git clone <repo-url>
+    git clone "https://github.com/mohomad-nizlan/steamnoodles-feedback-agent-Mohomad-Nizlan.git"
     cd Nizlan_SteamNoodles
     ```
 2. Install required packages:
     ```bash
-    pip install langchain langchain-openai openai pandas matplotlib seaborn python-dotenv dateparser
+    pip install langchain langchain-community ctransformers pandas matplotlib seaborn dateparser
     ```
-3. Add a `.env` file in the project root with:
-    ```text
-    OPENAI_API_KEY=your_openai_api_key_here
+3. Place your local model file in a `models` folder:
+    ```
+    models/mistral-7b-instruct-v0.2.Q4_K_M.gguf
     ```
 4. Download dataset from [Kaggle Amazon Fine Food Reviews](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) and place `reviews.csv` in the project root.
 
